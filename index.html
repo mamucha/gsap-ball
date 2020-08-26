@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP</title>
+  </head>
+  <style>
+    :root {
+      --size: 150px;
+    }
+    body {
+      background-color: coral;
+    }
+
+    .ball {
+      position: absolute;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      background-color: rgb(82, 6, 6);
+      bottom: calc(100% - var(--size));
+      left: calc(50% - var(--size) / 2);
+    }
+  </style>
+  <body>
+    <div class="ball"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script>
+      gsap.to('.ball', 5, { bottom: 0, ease: 'bounce.out', delay: 1 });
+    </script>
+  </body>
+</html>
